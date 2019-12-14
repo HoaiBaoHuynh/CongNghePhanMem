@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47CFCB28-306A-44E6-92D0-17687C4BFC20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoAnQLCafe</RootNamespace>
+    <AssemblyName>DoAnQLCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BSLAYER\BAN.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\BLLoaiMon.cs" />
+    <Compile Include="BSLAYER\CHAMCONG.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\CHITIETPHIEU.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\CONGTHUC.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\KHUVUC.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\LOAIMON.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\NGUYENLIEU.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\NHANVIEN.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\PHIEU.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\QLQuanCafe.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQuanCafe.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\QLQuanCafe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\QLQuanCafe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQuanCafe.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\TAIKHOAN.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BSLAYER\THUCDON.cs">
+      <DependentUpon>QLQuanCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLLoaiMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLLoaiMon.Designer.cs">
+      <DependentUpon>QLLoaiMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNhanVien.Designer.cs">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QLLoaiMon.resx">
+      <DependentUpon>QLLoaiMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="BSLAYER\QLQuanCafe.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLQuanCafe.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BSLAYER\QLQuanCafe.edmx.diagram">
+      <DependentUpon>QLQuanCafe.edmx</DependentUpon>
+    </None>
+    <None Include="IMAGE\Icon\Add\Thumbs.db" />
+    <None Include="IMAGE\Icon\Archive\Thumbs.db" />
+    <None Include="IMAGE\Icon\Audio Disk\Thumbs.db" />
+    <None Include="IMAGE\Icon\Burn Disk\Thumbs.db" />
+    <None Include="IMAGE\Icon\Calendar\Thumbs.db" />
+    <None Include="IMAGE\Icon\Cancel\Thumbs.db" />
+    <None Include="IMAGE\Icon\Check\Thumbs.db" />
+    <None Include="IMAGE\Icon\Compact Disk\Thumbs.db" />
+    <None Include="IMAGE\Icon\Copy v2\Thumbs.db" />
+    <None Include="IMAGE\Icon\Copy\Thumbs.db" />
+    <None Include="IMAGE\Icon\Cut\.DS_Store" />
+    <None Include="IMAGE\Icon\Cut\Thumbs.db" />
+    <None Include="IMAGE\Icon\Delete\Thumbs.db" />
+    <None Include="IMAGE\Icon\Download\Thumbs.db" />
+    <None Include="IMAGE\Icon\DVD Disk\Thumbs.db" />
+    <None Include="IMAGE\Icon\Edit\Thumbs.db" />
+    <None Include="IMAGE\Icon\Favorites\Thumbs.db" />
+    <None Include="IMAGE\Icon\Find\Thumbs.db" />
+    <None Include="IMAGE\Icon\Flash Disk\Thumbs.db" />
+    <None Include="IMAGE\Icon\Folder\Thumbs.db" />
+    <None Include="IMAGE\Icon\Forward\Thumbs.db" />
+    <None Include="IMAGE\Icon\Globe\Thumbs.db" />
+    <None Include="IMAGE\Icon\Hard Disk\Thumbs.db" />
+    <None Include="IMAGE\Icon\Help\Thumbs.db" />
+    <None Include="IMAGE\Icon\Information\Thumbs.db" />
+    <None Include="IMAGE\Icon\Key\Thumbs.db" />
+    <None Include="IMAGE\Icon\Log Out\Thumbs.db" />
+    <None Include="IMAGE\Icon\Mail\Thumbs.db" />
+    <None Include="IMAGE\Icon\Negative\Thumbs.db" />
+    <None Include="IMAGE\Icon\New\Thumbs.db" />
+    <None Include="IMAGE\Icon\Next\Thumbs.db" />
+    <None Include="IMAGE\Icon\Open\Thumbs.db" />
+    <None Include="IMAGE\Icon\Paste\Thumbs.db" />
+    <None Include="IMAGE\Icon\Pause\Thumbs.db" />
+    <None Include="IMAGE\Icon\Picture\Thumbs.db" />
+    <None Include="IMAGE\Icon\Play\Thumbs.db" />
+    <None Include="IMAGE\Icon\Positive\Thumbs.db" />
+    <None Include="IMAGE\Icon\Presentation\Thumbs.db" />
+    <None Include="IMAGE\Icon\Preview\Thumbs.db" />
+    <None Include="IMAGE\Icon\Previous\.DS_Store" />
+    <None Include="IMAGE\Icon\Previous\Thumbs.db" />
+    <None Include="IMAGE\Icon\Print\Thumbs.db" />
+    <None Include="IMAGE\Icon\Properties\Thumbs.db" />
+    <None Include="IMAGE\Icon\Redo\Thumbs.db" />
+    <None Include="IMAGE\Icon\Refresh\Thumbs.db" />
+    <None Include="IMAGE\Icon\Remove\Thumbs.db" />
+    <None Include="IMAGE\Icon\Rename\Thumbs.db" />
+    <None Include="IMAGE\Icon\Save\Thumbs.db" />
+    <None Include="IMAGE\Icon\Search\Thumbs.db" />
+    <None Include="IMAGE\Icon\Send\Thumbs.db" />
+    <None Include="IMAGE\Icon\Settings\Thumbs.db" />
+    <None Include="IMAGE\Icon\Stock Index Down\Thumbs.db" />
+    <None Include="IMAGE\Icon\Stock Index Up\Thumbs.db" />
+    <None Include="IMAGE\Icon\Stop\Thumbs.db" />
+    <None Include="IMAGE\Icon\Synchronize\Thumbs.db" />
+    <None Include="IMAGE\Icon\Text Document\Thumbs.db" />
+    <None Include="IMAGE\Icon\Undo\Thumbs.db" />
+    <None Include="IMAGE\Icon\Upload\Thumbs.db" />
+    <None Include="IMAGE\Icon\User\Thumbs.db" />
+    <None Include="IMAGE\Icon\Zoom In\Thumbs.db" />
+    <None Include="IMAGE\Icon\Zoom Out\Thumbs.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BSLAYER\QLQuanCafe.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLQuanCafe.edmx</DependentUpon>
+      <LastGenOutput>QLQuanCafe.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BSLAYER\QLQuanCafe.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLQuanCafe.edmx</DependentUpon>
+      <LastGenOutput>QLQuanCafe.cs</LastGenOutput>
+    </Content>
+    <Content Include="IMAGE\Icon\Add\Add.ico" />
+    <Content Include="IMAGE\Icon\Add\Add_16x16.png" />
+    <Content Include="IMAGE\Icon\Add\Add_24x24.png" />
+    <Content Include="IMAGE\Icon\Add\Add_256x256.png" />
+    <Content Include="IMAGE\Icon\Add\Add_32x32.png" />
+    <Content Include="IMAGE\Icon\Add\Add_48x48.png" />
+    <Content Include="IMAGE\Icon\Archive\Archive.ico" />
+    <Content Include="IMAGE\Icon\Archive\Archive_16x16.png" />
+    <Content Include="IMAGE\Icon\Archive\Archive_24x24.png" />
+    <Content Include="IMAGE\Icon\Archive\Archive_256x256.png" />
+    <Content Include="IMAGE\Icon\Archive\Archive_32x32.png" />
+    <Content Include="IMAGE\Icon\Archive\Archive_48x48.png" />
+    <Content Include="IMAGE\Icon\Audio Disk\Audio Disk.ico" />
+    <Content Include="IMAGE\Icon\Audio Disk\Audio Disk_16x16.png" />
+    <Content Include="IMAGE\Icon\Audio Disk\Audio Disk_24x24.png" />
+    <Content Include="IMAGE\Icon\Audio Disk\Audio Disk_256x256.png" />
+    <Content Include="IMAGE\Icon\Audio Disk\Audio Disk_32x32.png" />
+    <Content Include="IMAGE\Icon\Audio Disk\Audio Disk_48x48.png" />
+    <Content Include="IMAGE\Icon\Burn Disk\Burn Disk.ico" />
+    <Content Include="IMAGE\Icon\Burn Disk\Burn Disk_16x16.png" />
+    <Content Include="IMAGE\Icon\Burn Disk\Burn Disk_24x24.png" />
+    <Content Include="IMAGE\Icon\Burn Disk\Burn Disk_256x256.png" />
+    <Content Include="IMAGE\Icon\Burn Disk\Burn Disk_32x32.png" />
+    <Content Include="IMAGE\Icon\Burn Disk\Burn Disk_48x48.png" />
+    <Content Include="IMAGE\Icon\Calendar\Calendar.ico" />
+    <Content Include="IMAGE\Icon\Calendar\Calendar_16x16.png" />
+    <Content Include="IMAGE\Icon\Calendar\Calendar_24x24.png" />
+    <Content Include="IMAGE\Icon\Calendar\Calendar_256x256.png" />
+    <Content Include="IMAGE\Icon\Calendar\Calendar_32x32.png" />
+    <Content Include="IMAGE\Icon\Calendar\Calendar_48x48.png" />
+    <Content Include="IMAGE\Icon\Cancel\Cancel.ico" />
+    <Content Include="IMAGE\Icon\Cancel\Cancel_16x16.png" />
+    <Content Include="IMAGE\Icon\Cancel\Cancel_24x24.png" />
+    <Content Include="IMAGE\Icon\Cancel\Cancel_256x256.png" />
+    <Content Include="IMAGE\Icon\Cancel\Cancel_32x32.png" />
+    <Content Include="IMAGE\Icon\Cancel\Cancel_48x48.png" />
+    <Content Include="IMAGE\Icon\Check\Check.ico" />
+    <Content Include="IMAGE\Icon\Check\Check_16x16.png" />
+    <Content Include="IMAGE\Icon\Check\Check_24x24.png" />
+    <Content Include="IMAGE\Icon\Check\Check_256x256.png" />
+    <Content Include="IMAGE\Icon\Check\Check_32x32.png" />
+    <Content Include="IMAGE\Icon\Check\Check_48x48.png" />
+    <Content Include="IMAGE\Icon\Compact Disk\Compact Disk.ico" />
+    <Content Include="IMAGE\Icon\Compact Disk\Compact Disk_16x16.png" />
+    <Content Include="IMAGE\Icon\Compact Disk\Compact Disk_24x24.png" />
+    <Content Include="IMAGE\Icon\Compact Disk\Compact Disk_256x256.png" />
+    <Content Include="IMAGE\Icon\Compact Disk\Compact Disk_32x32.png" />
+    <Content Include="IMAGE\Icon\Compact Disk\Compact Disk_48x48.png" />
+    <Content Include="IMAGE\Icon\Copy v2\Copy v2.ico" />
+    <Content Include="IMAGE\Icon\Copy v2\Copy v2_16x16.png" />
+    <Content Include="IMAGE\Icon\Copy v2\Copy v2_24x24.png" />
+    <Content Include="IMAGE\Icon\Copy v2\Copy v2_256x256.png" />
+    <Content Include="IMAGE\Icon\Copy v2\Copy v2_32x32.png" />
+    <Content Include="IMAGE\Icon\Copy v2\Copy v2_48x48.png" />
+    <Content Include="IMAGE\Icon\Copy\Copy.ico" />
+    <Content Include="IMAGE\Icon\Copy\Copy_16x16.png" />
+    <Content Include="IMAGE\Icon\Copy\Copy_24x24.png" />
+    <Content Include="IMAGE\Icon\Copy\Copy_256x256.png" />
+    <Content Include="IMAGE\Icon\Copy\Copy_32x32.png" />
+    <Content Include="IMAGE\Icon\Copy\Copy_48x48.png" />
+    <Content Include="IMAGE\Icon\Cut\Cut.ico" />
+    <Content Include="IMAGE\Icon\Cut\Cut_16x16.png" />
+    <Content Include="IMAGE\Icon\Cut\Cut_24x24.png" />
+    <Content Include="IMAGE\Icon\Cut\Cut_256x256.png" />
+    <Content Include="IMAGE\Icon\Cut\Cut_32x32.png" />
+    <Content Include="IMAGE\Icon\Cut\Cut_48x48.png" />
+    <Content Include="IMAGE\Icon\Delete\Delete.ico" />
+    <Content Include="IMAGE\Icon\Delete\Delete_16x16.png" />
+    <Content Include="IMAGE\Icon\Delete\Delete_24x24.png" />
+    <Content Include="IMAGE\Icon\Delete\Delete_256x256.png" />
+    <Content Include="IMAGE\Icon\Delete\Delete_32x32.png" />
+    <Content Include="IMAGE\Icon\Delete\Delete_48x48.png" />
+    <Content Include="IMAGE\Icon\Download\Download.ico" />
+    <Content Include="IMAGE\Icon\Download\Download_16x16.png" />
+    <Content Include="IMAGE\Icon\Download\Download_24x24.png" />
+    <Content Include="IMAGE\Icon\Download\Download_256x256.png" />
+    <Content Include="IMAGE\Icon\Download\Download_32x32.png" />
+    <Content Include="IMAGE\Icon\Download\Download_48x48.png" />
+    <Content Include="IMAGE\Icon\DVD Disk\DVD Disk.ico" />
+    <Content Include="IMAGE\Icon\DVD Disk\DVD Disk_16x16.png" />
+    <Content Include="IMAGE\Icon\DVD Disk\DVD Disk_24x24.png" />
+    <Content Include="IMAGE\Icon\DVD Disk\DVD Disk_256x256.png" />
+    <Content Include="IMAGE\Icon\DVD Disk\DVD Disk_32x32.png" />
+    <Content Include="IMAGE\Icon\DVD Disk\DVD Disk_48x48.png" />
+    <Content Include="IMAGE\Icon\Edit\Edit.ico" />
+    <Content Include="IMAGE\Icon\Edit\Edit_16x16.png" />
+    <Content Include="IMAGE\Icon\Edit\Edit_24x24.png" />
+    <Content Include="IMAGE\Icon\Edit\Edit_256x256.png" />
+    <Content Include="IMAGE\Icon\Edit\Edit_32x32.png" />
+    <Content Include="IMAGE\Icon\Edit\Edit_48x48.png" />
+    <Content Include="IMAGE\Icon\Favorites\Favorites.ico" />
+    <Content Include="IMAGE\Icon\Favorites\Favorites_16x16.png" />
+    <Content Include="IMAGE\Icon\Favorites\Favorites_24x24.png" />
+    <Content Include="IMAGE\Icon\Favorites\Favorites_256x256.png" />
+    <Content Include="IMAGE\Icon\Favorites\Favorites_32x32.png" />
+    <Content Include="IMAGE\Icon\Favorites\Favorites_48x48.png" />
+    <Content Include="IMAGE\Icon\Find\Find.ico" />
+    <Content Include="IMAGE\Icon\Find\Find_16x16.png" />
+    <Content Include="IMAGE\Icon\Find\Find_24x24.png" />
+    <Content Include="IMAGE\Icon\Find\Find_256x256.png" />
+    <Content Include="IMAGE\Icon\Find\Find_32x32.png" />
+    <Content Include="IMAGE\Icon\Find\Find_48x48.png" />
+    <Content Include="IMAGE\Icon\Flash Disk\Flash Disk.ico" />
+    <Content Include="IMAGE\Icon\Flash Disk\Flash Disk_16x16.png" />
+    <Content Include="IMAGE\Icon\Flash Disk\Flash Disk_24x24.png" />
+    <Content Include="IMAGE\Icon\Flash Disk\Flash Disk_256x256.png" />
+    <Content Include="IMAGE\Icon\Flash Disk\Flash Disk_32x32.png" />
+    <Content Include="IMAGE\Icon\Flash Disk\Flash Disk_48x48.png" />
+    <Content Include="IMAGE\Icon\Folder\Folder.ico" />
+    <Content Include="IMAGE\Icon\Folder\Folder_16x16.png" />
+    <Content Include="IMAGE\Icon\Folder\Folder_24x24.png" />
+    <Content Include="IMAGE\Icon\Folder\Folder_256x256.png" />
+    <Content Include="IMAGE\Icon\Folder\Folder_32x32.png" />
+    <Content Include="IMAGE\Icon\Folder\Folder_48x48.png" />
+    <Content Include="IMAGE\Icon\Forward\Forward.ico" />
+    <Content Include="IMAGE\Icon\Forward\Forward_16x16.png" />
+    <Content Include="IMAGE\Icon\Forward\Forward_24x24.png" />
+    <Content Include="IMAGE\Icon\Forward\Forward_256x256.png" />
+    <Content Include="IMAGE\Icon\Forward\Forward_32x32.png" />
+    <Content Include="IMAGE\Icon\Forward\Forward_48x48.png" />
+    <Content Include="IMAGE\Icon\Globe\Globe.ico" />
+    <Content Include="IMAGE\Icon\Globe\Globe_16x16.png" />
+    <Content Include="IMAGE\Icon\Globe\Globe_24x24.png" />
+    <Content Include="IMAGE\Icon\Globe\Globe_256x256.png" />
+    <Content Include="IMAGE\Icon\Globe\Globe_32x32.png" />
+    <Content Include="IMAGE\Icon\Globe\Globe_48x48.png" />
+    <Content Include="IMAGE\Icon\Hard Disk\Hard Disk.ico" />
+    <Content Include="IMAGE\Icon\Hard Disk\Hard Disk_16x16.png" />
+    <Content Include="IMAGE\Icon\Hard Disk\Hard Disk_24x24.png" />
+    <Content Include="IMAGE\Icon\Hard Disk\Hard Disk_256x256.png" />
+    <Content Include="IMAGE\Icon\Hard Disk\Hard Disk_32x32.png" />
+    <Content Include="IMAGE\Icon\Hard Disk\Hard Disk_48x48.png" />
+    <Content Include="IMAGE\Icon\Help\Help.ico" />
+    <Content Include="IMAGE\Icon\Help\Help_16x16.png" />
+    <Content Include="IMAGE\Icon\Help\Help_24x24.png" />
+    <Content Include="IMAGE\Icon\Help\Help_256x256.png" />
+    <Content Include="IMAGE\Icon\Help\Help_32x32.png" />
+    <Content Include="IMAGE\Icon\Help\Help_48x48.png" />
+    <Content Include="IMAGE\Icon\Information\Information.ico" />
+    <Content Include="IMAGE\Icon\Information\Information_16x16.png" />
+    <Content Include="IMAGE\Icon\Information\Information_24x24.png" />
+    <Content Include="IMAGE\Icon\Information\Information_256x256.png" />
+    <Content Include="IMAGE\Icon\Information\Information_32x32.png" />
+    <Content Include="IMAGE\Icon\Information\Information_48x48.png" />
+    <Content Include="IMAGE\Icon\Key\Key.ico" />
+    <Content Include="IMAGE\Icon\Key\Key_16x16.png" />
+    <Content Include="IMAGE\Icon\Key\Key_24x24.png" />
+    <Content Include="IMAGE\Icon\Key\Key_256x256.png" />
+    <Content Include="IMAGE\Icon\Key\Key_32x32.png" />
+    <Content Include="IMAGE\Icon\Key\Key_48x48.png" />
+    <Content Include="IMAGE\Icon\Log Out\Log Out.ico" />
+    <Content Include="IMAGE\Icon\Log Out\Log Out_16x16.png" />
+    <Content Include="IMAGE\Icon\Log Out\Log Out_24x24.png" />
+    <Content Include="IMAGE\Icon\Log Out\Log Out_256x256.png" />
+    <Content Include="IMAGE\Icon\Log Out\Log Out_32x32.png" />
+    <Content Include="IMAGE\Icon\Log Out\Log Out_48x48.png" />
+    <Content Include="IMAGE\Icon\Mail\Mail.ico" />
+    <Content Include="IMAGE\Icon\Mail\Mail_16x16.png" />
+    <Content Include="IMAGE\Icon\Mail\Mail_24x24.png" />
+    <Content Include="IMAGE\Icon\Mail\Mail_256x256.png" />
+    <Content Include="IMAGE\Icon\Mail\Mail_32x32.png" />
+    <Content Include="IMAGE\Icon\Mail\Mail_48x48.png" />
+    <Content Include="IMAGE\Icon\Negative\Negative.ico" />
+    <Content Include="IMAGE\Icon\Negative\Negative_16x16.png" />
+    <Content Include="IMAGE\Icon\Negative\Negative_24x24.png" />
+    <Content Include="IMAGE\Icon\Negative\Negative_256x256.png" />
+    <Content Include="IMAGE\Icon\Negative\Negative_32x32.png" />
+    <Content Include="IMAGE\Icon\Negative\Negative_48x48.png" />
+    <Content Include="IMAGE\Icon\New\New.ico" />
+    <Content Include="IMAGE\Icon\New\New_16x16.png" />
+    <Content Include="IMAGE\Icon\New\New_24x24.png" />
+    <Content Include="IMAGE\Icon\New\New_256x256.png" />
+    <Content Include="IMAGE\Icon\New\New_32x32.png" />
+    <Content Include="IMAGE\Icon\New\New_48x48.png" />
+    <Content Include="IMAGE\Icon\Next\Next.ico" />
+    <Content Include="IMAGE\Icon\Next\Next_16x16.png" />
+    <Content Include="IMAGE\Icon\Next\Next_24x24.png" />
+    <Content Include="IMAGE\Icon\Next\Next_256x256.png" />
+    <Content Include="IMAGE\Icon\Next\Next_32x32.png" />
+    <Content Include="IMAGE\Icon\Next\Next_48x48.png" />
+    <Content Include="IMAGE\Icon\Open\Open.ico" />
+    <Content Include="IMAGE\Icon\Open\Open_16x16.png" />
+    <Content Include="IMAGE\Icon\Open\Open_24x24.png" />
+    <Content Include="IMAGE\Icon\Open\Open_256x256.png" />
+    <Content Include="IMAGE\Icon\Open\Open_32x32.png" />
+    <Content Include="IMAGE\Icon\Open\Open_48x48.png" />
+    <Content Include="IMAGE\Icon\Paste\Paste.ico" />
+    <Content Include="IMAGE\Icon\Paste\Paste_16x16.png" />
+    <Content Include="IMAGE\Icon\Paste\Paste_24x24.png" />
+    <Content Include="IMAGE\Icon\Paste\Paste_256x256.png" />
+    <Content Include="IMAGE\Icon\Paste\Paste_32x32.png" />
+    <Content Include="IMAGE\Icon\Paste\Paste_48x48.png" />
+    <Content Include="IMAGE\Icon\Pause\Pause.ico" />
+    <Content Include="IMAGE\Icon\Pause\Pause_16x16.png" />
+    <Content Include="IMAGE\Icon\Pause\Pause_24x24.png" />
+    <Content Include="IMAGE\Icon\Pause\Pause_256x256.png" />
+    <Content Include="IMAGE\Icon\Pause\Pause_32x32.png" />
+    <Content Include="IMAGE\Icon\Pause\Pause_48x48.png" />
+    <Content Include="IMAGE\Icon\Picture\Picture.ico" />
+    <Content Include="IMAGE\Icon\Picture\Picture_16x16.png" />
+    <Content Include="IMAGE\Icon\Picture\Picture_24x24.png" />
+    <Content Include="IMAGE\Icon\Picture\Picture_256x256.png" />
+    <Content Include="IMAGE\Icon\Picture\Picture_32x32.png" />
+    <Content Include="IMAGE\Icon\Picture\Picture_48x48.png" />
+    <Content Include="IMAGE\Icon\Play\Play.ico" />
+    <Content Include="IMAGE\Icon\Play\Play_16x16.png" />
+    <Content Include="IMAGE\Icon\Play\Play_24x24.png" />
+    <Content Include="IMAGE\Icon\Play\Play_256x256.png" />
+    <Content Include="IMAGE\Icon\Play\Play_32x32.png" />
+    <Content Include="IMAGE\Icon\Play\Play_48x48.png" />
+    <Content Include="IMAGE\Icon\Positive\Positive.ico" />
+    <Content Include="IMAGE\Icon\Positive\Positive_16x16.png" />
+    <Content Include="IMAGE\Icon\Positive\Positive_24x24.png" />
+    <Content Include="IMAGE\Icon\Positive\Positive_256x256.png" />
+    <Content Include="IMAGE\Icon\Positive\Positive_32x32.png" />
+    <Content Include="IMAGE\Icon\Positive\Positive_48x48.png" />
+    <Content Include="IMAGE\Icon\Presentation\Presentation.ico" />
+    <Content Include="IMAGE\Icon\Presentation\Presentation_16x16.png" />
+    <Content Include="IMAGE\Icon\Presentation\Presentation_24x24.png" />
+    <Content Include="IMAGE\Icon\Presentation\Presentation_256x256.png" />
+    <Content Include="IMAGE\Icon\Presentation\Presentation_32x32.png" />
+    <Content Include="IMAGE\Icon\Presentation\Presentation_48x48.png" />
+    <Content Include="IMAGE\Icon\Preview\Preview.ico" />
+    <Content Include="IMAGE\Icon\Preview\Preview_16x16.png" />
+    <Content Include="IMAGE\Icon\Preview\Preview_24x24.png" />
+    <Content Include="IMAGE\Icon\Preview\Preview_256x256.png" />
+    <Content Include="IMAGE\Icon\Preview\Preview_32x32.png" />
+    <Content Include="IMAGE\Icon\Preview\Preview_48x48.png" />
+    <Content Include="IMAGE\Icon\Previous\Previous.ico" />
+    <Content Include="IMAGE\Icon\Previous\Previous_16x16.png" />
+    <Content Include="IMAGE\Icon\Previous\Previous_24x24.png" />
+    <Content Include="IMAGE\Icon\Previous\Previous_256x256.png" />
+    <Content Include="IMAGE\Icon\Previous\Previous_32x32.png" />
+    <Content Include="IMAGE\Icon\Previous\Previous_48x48.png" />
+    <Content Include="IMAGE\Icon\Print\Print.ico" />
+    <Content Include="IMAGE\Icon\Print\Print_16x16.png" />
+    <Content Include="IMAGE\Icon\Print\Print_24x24.png" />
+    <Content Include="IMAGE\Icon\Print\Print_256x256.png" />
+    <Content Include="IMAGE\Icon\Print\Print_32x32.png" />
+    <Content Include="IMAGE\Icon\Print\Print_48x48.png" />
+    <Content Include="IMAGE\Icon\Properties\Properties.ico" />
+    <Content Include="IMAGE\Icon\Properties\Properties_16x16.png" />
+    <Content Include="IMAGE\Icon\Properties\Properties_24x24.png" />
+    <Content Include="IMAGE\Icon\Properties\Properties_256x256.png" />
+    <Content Include="IMAGE\Icon\Properties\Properties_32x32.png" />
+    <Content Include="IMAGE\Icon\Properties\Properties_48x48.png" />
+    <Content Include="IMAGE\Icon\Redo\Redo.ico" />
+    <Content Include="IMAGE\Icon\Redo\Redo_16x16.png" />
+    <Content Include="IMAGE\Icon\Redo\Redo_24x24.png" />
+    <Content Include="IMAGE\Icon\Redo\Redo_256x256.png" />
+    <Content Include="IMAGE\Icon\Redo\Redo_32x32.png" />
+    <Content Include="IMAGE\Icon\Redo\Redo_48x48.png" />
+    <Content Include="IMAGE\Icon\Refresh\Refresh.ico" />
+    <Content Include="IMAGE\Icon\Refresh\Refresh_16x16.png" />
+    <Content Include="IMAGE\Icon\Refresh\Refresh_24x24.png" />
+    <Content Include="IMAGE\Icon\Refresh\Refresh_256x256.png" />
+    <Content Include="IMAGE\Icon\Refresh\Refresh_32x32.png" />
+    <Content Include="IMAGE\Icon\Refresh\Refresh_48x48.png" />
+    <Content Include="IMAGE\Icon\Remove\Remove.ico" />
+    <Content Include="IMAGE\Icon\Remove\Remove_16x16.png" />
+    <Content Include="IMAGE\Icon\Remove\Remove_24x24.png" />
+    <Content Include="IMAGE\Icon\Remove\Remove_256x256.png" />
+    <Content Include="IMAGE\Icon\Remove\Remove_32x32.png" />
+    <Content Include="IMAGE\Icon\Remove\Remove_48x48.png" />
+    <Content Include="IMAGE\Icon\Rename\Rename.ico" />
+    <Content Include="IMAGE\Icon\Rename\Rename_16x16.png" />
+    <Content Include="IMAGE\Icon\Rename\Rename_24x24.png" />
+    <Content Include="IMAGE\Icon\Rename\Rename_256x256.png" />
+    <Content Include="IMAGE\Icon\Rename\Rename_32x32.png" />
+    <Content Include="IMAGE\Icon\Rename\Rename_48x48.png" />
+    <Content Include="IMAGE\Icon\Save\Save.ico" />
+    <Content Include="IMAGE\Icon\Save\Save_16x16.png" />
+    <Content Include="IMAGE\Icon\Save\Save_24x24.png" />
+    <Content Include="IMAGE\Icon\Save\Save_256x256.png" />
+    <Content Include="IMAGE\Icon\Save\Save_32x32.png" />
+    <Content Include="IMAGE\Icon\Save\Save_48x48.png" />
+    <Content Include="IMAGE\Icon\Search\Search.ico" />
+    <Content Include="IMAGE\Icon\Search\Search_16x16.png" />
+    <Content Include="IMAGE\Icon\Search\Search_24x24.png" />
+    <Content Include="IMAGE\Icon\Search\Search_256x256.png" />
+    <Content Include="IMAGE\Icon\Search\Search_32x32.png" />
+    <Content Include="IMAGE\Icon\Search\Search_48x48.png" />
+    <Content Include="IMAGE\Icon\Send\Send.ico" />
+    <Content Include="IMAGE\Icon\Send\Send_16x16.png" />
+    <Content Include="IMAGE\Icon\Send\Send_24x24.png" />
+    <Content Include="IMAGE\Icon\Send\Send_256x256.png" />
+    <Content Include="IMAGE\Icon\Send\Send_32x32.png" />
+    <Content Include="IMAGE\Icon\Send\Send_48x48.png" />
+    <Content Include="IMAGE\Icon\Settings\Settings.ico" />
+    <Content Include="IMAGE\Icon\Settings\Settings_16x16.png" />
+    <Content Include="IMAGE\Icon\Settings\Settings_24x24.png" />
+    <Content Include="IMAGE\Icon\Settings\Settings_256x256.png" />
+    <Content Include="IMAGE\Icon\Settings\Settings_32x32.png" />
+    <Content Include="IMAGE\Icon\Settings\Settings_48x48.png" />
+    <Content Include="IMAGE\Icon\Stock Index Down\Stock Index Down.ico" />
+    <Content Include="IMAGE\Icon\Stock Index Down\Stock Index Down_16x16.png" />
+    <Content Include="IMAGE\Icon\Stock Index Down\Stock Index Down_24x24.png" />
+    <Content Include="IMAGE\Icon\Stock Index Down\Stock Index Down_256x256.png" />
+    <Content Include="IMAGE\Icon\Stock Index Down\Stock Index Down_32x32.png" />
+    <Content Include="IMAGE\Icon\Stock Index Down\Stock Index Down_48x48.png" />
+    <Content Include="IMAGE\Icon\Stock Index Up\Stock Index Up.ico" />
+    <Content Include="IMAGE\Icon\Stock Index Up\Stock Index Up_16x16.png" />
+    <Content Include="IMAGE\Icon\Stock Index Up\Stock Index Up_24x24.png" />
+    <Content Include="IMAGE\Icon\Stock Index Up\Stock Index Up_256x256.png" />
+    <Content Include="IMAGE\Icon\Stock Index Up\Stock Index Up_32x32.png" />
+    <Content Include="IMAGE\Icon\Stock Index Up\Stock Index Up_48x48.png" />
+    <Content Include="IMAGE\Icon\Stop\Stop.ico" />
+    <Content Include="IMAGE\Icon\Stop\Stop_16x16.png" />
+    <Content Include="IMAGE\Icon\Stop\Stop_24x24.png" />
+    <Content Include="IMAGE\Icon\Stop\Stop_256x256.png" />
+    <Content Include="IMAGE\Icon\Stop\Stop_32x32.png" />
+    <Content Include="IMAGE\Icon\Stop\Stop_48x48.png" />
+    <Content Include="IMAGE\Icon\Synchronize\Synchronize.ico" />
+    <Content Include="IMAGE\Icon\Synchronize\Synchronize_16x16.png" />
+    <Content Include="IMAGE\Icon\Synchronize\Synchronize_24x24.png" />
+    <Content Include="IMAGE\Icon\Synchronize\Synchronize_256x256.png" />
+    <Content Include="IMAGE\Icon\Synchronize\Synchronize_32x32.png" />
+    <Content Include="IMAGE\Icon\Synchronize\Synchronize_48x48.png" />
+    <Content Include="IMAGE\Icon\Text Document\Text Document.ico" />
+    <Content Include="IMAGE\Icon\Text Document\Text Document_16x16.png" />
+    <Content Include="IMAGE\Icon\Text Document\Text Document_24x24.png" />
+    <Content Include="IMAGE\Icon\Text Document\Text Document_256x256.png" />
+    <Content Include="IMAGE\Icon\Text Document\Text Document_32x32.png" />
+    <Content Include="IMAGE\Icon\Text Document\Text Document_48x48.png" />
+    <Content Include="IMAGE\Icon\Undo\Undo.ico" />
+    <Content Include="IMAGE\Icon\Undo\Undo_16x16.png" />
+    <Content Include="IMAGE\Icon\Undo\Undo_24x24.png" />
+    <Content Include="IMAGE\Icon\Undo\Undo_256x256.png" />
+    <Content Include="IMAGE\Icon\Undo\Undo_32x32.png" />
+    <Content Include="IMAGE\Icon\Undo\Undo_48x48.png" />
+    <Content Include="IMAGE\Icon\Upload\Upload.ico" />
+    <Content Include="IMAGE\Icon\Upload\Upload_16x16.png" />
+    <Content Include="IMAGE\Icon\Upload\Upload_24x24.png" />
+    <Content Include="IMAGE\Icon\Upload\Upload_256x256.png" />
+    <Content Include="IMAGE\Icon\Upload\Upload_32x32.png" />
+    <Content Include="IMAGE\Icon\Upload\Upload_48x48.png" />
+    <Content Include="IMAGE\Icon\User\User.ico" />
+    <Content Include="IMAGE\Icon\User\User_16x16.png" />
+    <Content Include="IMAGE\Icon\User\User_24x24.png" />
+    <Content Include="IMAGE\Icon\User\User_256x256.png" />
+    <Content Include="IMAGE\Icon\User\User_32x32.png" />
+    <Content Include="IMAGE\Icon\User\User_48x48.png" />
+    <Content Include="IMAGE\Icon\Zoom In\Zoom In.ico" />
+    <Content Include="IMAGE\Icon\Zoom In\Zoom In_16x16.png" />
+    <Content Include="IMAGE\Icon\Zoom In\Zoom In_24x24.png" />
+    <Content Include="IMAGE\Icon\Zoom In\Zoom In_256x256.png" />
+    <Content Include="IMAGE\Icon\Zoom In\Zoom In_32x32.png" />
+    <Content Include="IMAGE\Icon\Zoom In\Zoom In_48x48.png" />
+    <Content Include="IMAGE\Icon\Zoom Out\Zoom Out.ico" />
+    <Content Include="IMAGE\Icon\Zoom Out\Zoom Out_16x16.png" />
+    <Content Include="IMAGE\Icon\Zoom Out\Zoom Out_24x24.png" />
+    <Content Include="IMAGE\Icon\Zoom Out\Zoom Out_256x256.png" />
+    <Content Include="IMAGE\Icon\Zoom Out\Zoom Out_32x32.png" />
+    <Content Include="IMAGE\Icon\Zoom Out\Zoom Out_48x48.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
