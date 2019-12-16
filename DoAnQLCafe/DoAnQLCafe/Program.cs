@@ -16,7 +16,7 @@ namespace DoAnQLCafe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLLoaiMon());
+            Application.Run(new QL_NhanVien());
         }
     }
 }
